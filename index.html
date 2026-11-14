@@ -8,8 +8,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="weather-container">
+    <h1 id="weather-title">Weather Dashboard</h1>
 
+    <div class="search">
+        <input id="city-input" type="text" placeholder="Enter a city... Default: yours">
+        <button id="get-weather-btn">Get Weather</button>
+    </div>
+
+    <p id="error" hidden></p>
+
+    <div id="weather-container">
+        <div class="weather-card">
+            <div class="card-header">
+                <h2 id="city">--</h2>
+                <p id="date"></p>
+            </div>
+
+            <div class="card-main">
+                <img id="icon" src="" alt="weather icon">
+                <div>
+                    <p id="temp">--°C</p>
+                    <p id="description"></p>
+                </div>
+            </div>
+
+            <div class="card-details">
+                <div><span>Feels like</span><strong id="feels">--</strong></div>
+                <div><span>Humidity</span><strong id="humidity">--</strong></div>
+                <div><span>Wind</span><strong id="wind">--</strong></div>
+            </div>
+
+            <div class="card-forecast" id="forecast"></div>
+        </div>
     </div>
     <script src="script.js" type="module"></script>
 </body>
